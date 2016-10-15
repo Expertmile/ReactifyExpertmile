@@ -1,0 +1,109 @@
+/* Dailog CSS */
+
+.side-nav__main {
+  font-family: 'Roboto';
+  font-size: 14px;
+  outline: none;
+  height: 42px;
+  padding-left: 56px;
+  margin-top:5px;
+  margin-bottom:5px;
+  width: 100%;
+  text-align: left;
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+
+.side-nav__main a {
+  text-decoration: none;
+  color: rgba(0,0,0,0.87);
+}
+
+.side-nav__edit_status {
+  background: url(/timeline/images/edit.svg) 15px 8px no-repeat;
+  background-size: 24px, 24px;
+}
+
+.side-nav__delete_status {
+  background: url(/timeline/images/garbage.png) 15px 8px no-repeat;
+  background-size: 24px, 24px;
+}
+.side-nav__facebook {
+  background: url(/timeline/images/facebook.png) 15px 8px no-repeat;
+  background-size: 24px, 24px;
+}
+
+.side-nav__twitter {
+  background: url(/timeline/images/twitter.png) 15px 8px no-repeat;
+  background-size: 24px, 24px;
+}
+
+.side-nav__linkedin {
+  background: url(/timeline/images/linkedin.png) 15px 8px no-repeat;
+  background-size: 24px, 24px;
+}
+
+.side-nav__gplus {
+  background: url(/timeline/images/google-plus.png) 15px 8px no-repeat;
+  background-size: 24px, 24px;
+}
+
+.detailed_item {
+    font-size: 9px;
+    font-weight: normal;
+    color: #444;
+}
+
+.dialog-view--visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.dialog-view__panel-headermenu {
+  padding: 5px;
+}
+
+.dialog-view__panel-header {
+  padding: 24px;
+}
+
+.dialog-view--visible .dialog-view__panel {
+  transform: translate(-50%, -50%);
+}
+
+.dialog-view__panel-footer {
+  padding: 8px;
+  text-align: right;
+}
+
+.dialog-view__panel-button {
+  height: 36px;
+  line-height: 36px;
+  text-transform: uppercase;
+  color: #006cb4;
+  font-size: 15px;
+  font-weight: 500;
+  background: none;
+  border: none;
+  padding: 0 8px;
+  line-height: 1;
+  outline:none;
+}
+
+.dialog-view__panel-title {
+  line-height: 32px;
+  font-size: 22px;
+  color: #000;
+  opacity: 0.87;
+  font-weight: 500;
+  margin: 0;
+}
+
+.dialog-view__panel-message {
+  font-size: 16px;
+  line-height: 24px;
+  margin: 20px 0 0 0;
+  opacity: 0.54;
+}

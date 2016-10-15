@@ -1,0 +1,125 @@
+/* Side navigation */
+.side-nav__header {
+  background:  url(/timeline/images/side-nav-bg@2x.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 171px;
+  position: relative;
+}
+
+.side-nav__title {
+  font-size: 16px;
+  line-height: 1;
+  color: #FFF;
+  position: absolute;
+  top: 75px;
+  white-space: pre-wrap;
+  left: 16px;
+  height: 16px;
+  font-weight: 500;
+}
+
+.side-nav__subtitle {
+  font-size: 13px;
+  line-height: 1;
+  color: #FFF;
+  font-weight: 500;
+  position: absolute;
+  top: 110px;
+  left: 16px;
+}
+
+.side-nav__headerauth{
+  margin-top: 30px;
+  border-radius: 50%;
+  padding:5px;
+}
+
+.side-nav__body {
+  padding-top: 8px;
+  pointer-events: auto;
+}
+
+.hr {
+  border-top: 0.1px solid #FAFAFA;
+}
+
+.side-nav__delete-memos,
+.side-nav__my-leads,
+.side-nav__new-assign,
+.side-nav__inbox,
+.side-nav__cards,
+.side-nav__articles,
+.side-nav__analytics,
+.side-nav__miles,
+.side-nav__keywords {
+  font-family: 'Roboto';
+  font-size: 14px;
+  outline: none;
+  height: 48px;
+  padding-left: 72px;
+  width: 100%;
+  text-align: left;
+  display: block;
+  border: none;
+  background: url(/timeline/images/avatar.svg) 16px 12px no-repeat;
+  background-size: 24px, 24px;
+  color: rgba(0,0,0,0.87);
+  cursor: pointer;
+}
+
+.side-nav__my-leads {
+  background: url(/timeline/images/bar-chart.svg) 16px 12px no-repeat;
+  background-size: 26px, 26px;
+  line-height: 48px;
+  text-decoration: none;
+}
+
+.side-nav__new-assign {
+  background-image: url(/timeline/images/paper.svg);
+  line-height: 48px;
+  background-size: 24px, 24px;
+  text-decoration: none;
+}
+
+.side-nav__inbox {
+  background-image: url(/timeline/images/speech-bubble.svg);
+  line-height: 48px;
+  background-size: 28px, 28px;
+  text-decoration: none;
+}
+
+.side-nav__cards {
+  background-image: url(/timeline/images/credit-card.svg);
+  line-height: 48px;
+  background-size: 26px, 26px;
+  text-decoration: none;
+}
+
+.side-nav__articles {
+  background-image: url(/timeline/images/edit.svg);
+  line-height: 48px;
+  background-size: 26px, 26px;
+  text-decoration: none;
+}
+
+.side-nav__keywords {
+  background-image: url(/timeline/images/edit.svg);
+  line-height: 48px;
+  background-size: 26px, 26px;
+  text-decoration: none;
+}
+
+.side-nav__analytics {
+  background-image: url(/timeline/images/insight.svg);
+  line-height: 48px;
+  background-size: 26px, 26px;
+  text-decoration: none;
+}
+
+.side-nav__miles {
+  background-image: url(/timeline/images/add-user.svg);
+  line-height: 48px;
+  background-size: 30px, 30px;
+  text-decoration: none;
+}

@@ -1,0 +1,374 @@
+.content {
+  position: relative;
+  width: 100%;
+  padding-top: 56px;
+}
+
+section {
+  position: relative;
+  padding: 12px;
+}
+
+.hr {
+  border-top: 0.5px dotted #ddd;
+}
+
+[contentEditable=true]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  /* For Firefox */
+}
+
+.articleTitle {
+  font-size: 41.93px;
+  font-family: "Sitka Banner",Georgia,Cambria,Calibri;
+}
+.articleBody {
+  font-size: 18px;
+}
+
+.editor {
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  cursor: text;
+  padding: 7px;
+  border-radius: 2px;
+  font-size:13px;
+  box-shadow: inset 0px 1px 8px -3px #ABABAB;
+  background: #fefefe;
+}
+
+//buttons
+.mdl_transparant__btn {
+  position: fixed;
+  bottom: 15px;
+  background: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #00A0DC;
+  opacity: 0.54;
+  text-transform: uppercase;
+  right: 10px;
+  outline: none;
+}
+
+.mdl_helpful_button {
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 12px;
+  color: #777;
+  opacity: 0.74;
+  outline: none;
+}
+
+.mdl_helpful_button> img,
+.mdl_helpful_button> span {
+  vertical-align: middle;
+}
+
+.mdl_helpful_button> img {
+  width: 16px;
+  height: 16px;
+  margin-top: -4px;
+}
+
+.mdl_helpful_button:hover {
+  opacity: 1;
+  color: #777;
+}
+
+.mdl_helpful_button_fill {
+  background: transparent;
+  border: none;
+  font-size: 13px;
+  margin-top: 12px;
+  color: #777;
+  cursor: pointer;
+  opacity: 1;
+  outline: none;
+}
+
+.mdl_helpful_button_fill> img,
+.mdl_helpful_button_fill> span {
+  vertical-align: middle;
+}
+
+.mdl_helpful_button_fill> img {
+  width: 16px;
+  height: 16px;
+  margin-top: -4px;
+}
+
+.mdl_helpful_button_fill:hover {
+  opacity: 1;
+  color: #777;
+}
+
+.commentbtn {
+  float: right;
+  background: #00A0DC;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+  color: #FFF;
+  margin: 5px;
+  font-size: 12px;
+}
+
+//miscalineous
+//Status panel style
+.comment_value {
+  font-size: 11px;
+  margin-top: 10px;
+  color: #777;
+}
+
+.imagecontainer {
+  min-height: 50px;
+}
+
+.nameblock {
+  position: absolute;
+  left:65px;
+  top:15px;
+  font-size: 12.5px;
+  color: #0c7cd5;
+  font-weight: bold;
+}
+
+.subdetails {
+  position: absolute;
+  left:65px;
+  top:35px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+.time_ago {
+  font-size: 9px;
+  margin-left: 5px;
+  float: right;
+  margin-top: 5px;
+}
+
+.postcontent {
+  white-space: pre-wrap;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 22px;
+  margin-top: 10px;
+  text-shadow: 0px -0.5px 0px rgba(0, 0, 0, .2);
+}
+
+.detailed_imageName {
+  border-radius: 50%;
+  min-height: 45px;
+  min-width: 45px;
+}
+
+.detailed_authorName {
+  font-size: 13px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+.detailed_subdetails {
+  font-weight: normal;
+  font-size: 10px;
+  color: #777;
+  margin-top: 2px;
+}
+
+.detailed_comment {
+  font-weight: normal;
+  font-size: 12.5px;
+  margin-top: 5px;
+}
+
+.commentText {
+  font-weight: normal;
+}
+
+.detailed_icon {
+  margin-top: 5px;
+}
+
+.seeMoreComment {
+  font-size: 12px;
+  padding: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+//card value
+.timeline_card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  overflow: hidden;
+  width: 100%;
+  margin-top:10px;
+  z-index: 1;
+  position: relative;
+  background: rgb(255,255,255);
+  border-radius: 2px;
+  box-sizing: border-box;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .24);
+}
+
+.tabs_card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: rgb(255,255,255);
+  border-radius: 2px;
+  box-sizing: border-box;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .24);
+}
+
+.card_body {
+  padding: 12px;
+  position: relative;
+}
+
+.card_body:before,
+.card_body:after {
+  content: " ";
+  display: table;
+}
+
+.card_body:after {
+  clear: both;
+}
+
+.comment_card {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: #f1f3f5;
+  border-radius: 2px;
+  box-sizing: border-box;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .24);
+}
+
+.card_body_comment {
+  padding: 5px;
+  position: relative;
+}
+
+.card_body_comment:before,
+.card_body_comment:after {
+  content: " ";
+  display: table;
+}
+
+.card_body_comment:after {
+  clear: both;
+}
+
+.timeline_card_bottom {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 16px;
+  font-weight: 400;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: #f1f3f5;
+  border-radius: 2px;
+  box-sizing: border-box;
+  box-shadow: 0 0 1px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .24);
+}
+
+.timeline_card_bottom {
+  padding: 5px;
+  position: relative;
+}
+
+.timeline_card_bottom:before,
+.timeline_card_bottom:after {
+  content: " ";
+  display: table;
+}
+
+.timeline_card_bottom:after {
+  clear: both;
+}
+
+//  Icons
+.tab_icons {
+  position: fixed;
+  margin: 0;
+  bottom: 12px;
+  overflow: hidden;
+  margin-left: -32px;
+  text-indent: -30000px;
+  opacity: 1;
+}
+
+.icono_tiles {
+  width: 3px;
+  height: 3px;
+  cursor: pointer;
+  box-shadow: -6px -6px 0, -6px 0 0, -6px 6px 0;
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 15px;
+  color: #ABABAB;
+}
+
+.detect_click {
+  padding: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.icono_tiles:hover {
+  color: #00A0DC;
+  cursor: pointer;
+}
+
+.text_info {
+  color: #00A0DC;
+  cursor: pointer;
+}
+
+.desk_tab_margin {
+  margin-top: -10px;
+}
