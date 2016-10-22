@@ -64,9 +64,9 @@ export default class ArticleMain extends React.Component {
         <Header auth={auth} title="Articles"/>
         <div className={styles.content}>
             <section>
-                <div className={styles.section_body}>
+                <div className="col_lg_12  col_sm_12">
                     <div className="row">
-                        <div className="col_lg_6 col_lg_offset_3 col_sm_8 col_sm_offset_2">
+                        <div>
                             <ArticlesListView 
                                 selectArticle={selectArticle} 
                                 articleIdsOrdered={articleIdsOrdered} 

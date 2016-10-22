@@ -29,7 +29,7 @@ export default class Header extends React.Component {
                     </button>
                     { auth.get('id') === null ?
                         <div>
-                            <a href="https://expertmile.com/loginnew.php">
+                            <a href="/chat">
                                 <button className="header-button__login">
                                     LOGIN
                                 </button>

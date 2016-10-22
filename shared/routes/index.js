@@ -18,6 +18,11 @@ export default () => {
             cb(null, require('../components/PostDetailPanel').default)
           })
         } } />
+        <Route path="Chat/list" getComponent = { (nextState, cb) => {
+          require.ensure([], (require) => {
+            cb(null, require('../components/Chat').default)
+          })
+        } } />
         <Route path="more" getComponent = { (nextState, cb) => {
           require.ensure([], (require) => {
             cb(null, require('../components/MoreRoute').default)

@@ -23,3 +23,6 @@ export { default as articleIdsOrdered }             from './ArticleDefaultSortin
 export { default as articleDetail }                 from './ArticleDetailReducer';
 export { default as paginateArticlesDetails }       from './paginateArticlesDetails';
 export { default as articleDetailIdsOrdered }       from './ArticleDetailSortingReducer';
+//Chat Reducers
+export { default as ChatReducer }                 from './ChatReducer';
+

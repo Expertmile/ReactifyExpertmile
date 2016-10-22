@@ -2,6 +2,8 @@ import Router from 'express/lib/router'
 import makeAgo from './timetoago'
 import mysql from 'mysql'
 import gcm from 'node-gcm'
+let async =require('async');
+let _   = require('underscore');
 
 const router = Router()
 
@@ -9,7 +11,7 @@ var pool = mysql.createPool({
   host: 'localhost',
   user: 'root',
   password: '',
-  database: 'test'
+  database: 'expertmile'
 })
 
 router.get('/posts/:id', (req, res) => {
@@ -79,6 +81,51 @@ router.get('/articles/list/:page', (req, res) => {
     })
     connection.release();
   })
+})
+
+router.get('/ChatUsers', (req, res) => {
+ var page='17';
+   pool.getConnection(function(err, connection) {
+    if (err) {
+      connection.release();
+      res.json({ "code": 100, "status": "Error in connection database" });
+      return;
+        }
+var query="select * from Conversation c,ConversationReply cr where c.ConversationID = cr.ConversationID AND (c.UserOne=? OR c.UserTwo=?) GROUP BY c.ConversationID Order By MAX(cr.Idate) DESC";
+  connection.query(String(query),[page,page],(err,rows) =>{
+    if(err) throw err;
+    console.log(rows);
+async.map(rows, getUsers,(err, results) =>{
+  alert(JSON.stringify(results));
+      res.writeHead(200, {'Content-Type': 'text/plain'});
+      res.end(JSON.stringify(_.flatten(_.compact(results))));
+});
+
+
+
+
+    })
+
+
+  function getUsers(user, callback) {
+    var userif;
+    if(Number(user.UserOne)===Number(page)){
+          userif=user.UserTwo;
+
+    }else{
+         userif=user.UserOne;
+
+    }
+    connection.query("SELECT ID,Fname,Lname,Category,ProfilePic FROM proffesional WHERE  ID=? " ,[userif], (err, info) => {
+        if(err) {
+            return callback(err);
+        }
+        else {
+           return callback(null, info);
+        }
+    });
+  }
+  });
 })
 
 router.get('/queries/:id', (req, res) => {

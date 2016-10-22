@@ -1,9 +1,10 @@
-import React, { PropTypes }      from 'react/lib/React';
-import ImmutablePropTypes        from 'react-immutable-proptypes';
-import LazyLoad                  from 'react-lazyload/lib/index';
-import browserHistory            from 'react-router/lib/browserHistory';
-import ReactDOM                  from 'react-dom';
-import InputComment  	           from './InputComment';
+import React, { PropTypes }        from 'react/lib/React';
+import ImmutablePropTypes          from 'react-immutable-proptypes';
+import LazyLoad                    from 'react-lazyload/lib/index';
+import browserHistory              from 'react-router/lib/browserHistory';
+import ReactDOM                    from 'react-dom';
+import InputComment  	             from './InputComment';
+
 
 
 export default class ArticleDetailView extends React.Component {
@@ -33,15 +34,26 @@ export default class ArticleDetailView extends React.Component {
   render() {
     const { articleDetailIdsOrdered, selectDetailedArticle, editable, auth } = this.props;
     const styles = require('../../scss/master.scss');
+    var divStyle = {
+  bacgroundk: '#006cb4'
+};
+
+    console.log(this.props);
     return (
       <div>
+      
+      
+      <div className={"col_lg_8 col_lg_offset_2  col_sm_12"}>
         { articleDetailIdsOrdered.map((id, index) => {
           return (
-            <div key={index}>
-                <div >
+            <div key={index} className={styles.timeline_card}>
+                <div className={styles.card_body}>
                   <article>
+                 
+                  
                       <h1 className={styles.articleTitle}>{selectDetailedArticle(id).get('article_name')}</h1>
                       <a href={'https://expertmile.com/newview.php?profID=' + selectDetailedArticle(id).get('ID')}><span>By: {selectDetailedArticle(id).get('Fname') + ' ' + selectDetailedArticle(id).get('Lname')}</span></a>
+                      
                       <h5>Comments: {selectDetailedArticle(id).get('comment_count')}</h5>
                       <p dangerouslySetInnerHTML={{ __html: selectDetailedArticle(id).get('content') }}></p>
                       <div>
@@ -75,6 +87,10 @@ export default class ArticleDetailView extends React.Component {
           );
         })
         }
+      </div>
+      
+      
+
       </div>
     );
   }
