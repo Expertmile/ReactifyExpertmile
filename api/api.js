@@ -129,6 +129,7 @@ async.map(rows, getUsers,(err, results) =>{
 })
 
 router.get('/queries/:id', (req, res) => {
+  //get all data from id
   pool.getConnection((err, connection) => {
     if (err) return res.sendStatus(500)
     connection.query('SELECT Status_ID, Status_Type, Status_Creator, likes, dislikes, Status_Value, Status_Time, p.ID, category, Fname, Lname, Organization, Designation, ProfilePic, Status, (SELECT statid FROM stat c WHERE c.statid=s.Status_ID AND c.userid = ? AND c.stat = 1 LIMIT 1) as liked FROM timelinestatus s INNER JOIN proffesional p ON s.Status_Creator = p.ID WHERE s.Status_Type="user_query" AND s.deleted != 1 ORDER BY s.Status_ID DESC LIMIT 10', [req.params.id], function (err, rows) {
